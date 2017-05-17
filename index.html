@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Seite 1 | Hexo Template</title>
+  <title>Page 1 | Hexo Template</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
@@ -82,7 +82,7 @@
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/hexo-template-site/archives">Archives</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/hexo-template-site/categories">Kategorien</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/hexo-template-site/categories">Categories</a> </li>
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/hexo-template-site/tags">Tags</a> </li>
                     
@@ -112,7 +112,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/hexo-template-site/2017/05/17/config/">Adjustments to Config file</a>
+      <a class="article-title" href="/hexo-template-site/2017/05/17/config/">Using Org-Mode in Hexo: Adjustments to Config file</a>
     </h1>
   
 
@@ -134,6 +134,23 @@
         
 
 <p>
+If you want to use <a href="http://orgmode.org/" target="_blank" rel="external">org-mode</a> instead of <a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="external">Markdown</a> in hexo, you need to download the org-mode plug in, and to tell hexo in the config file how to use it.
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Install the org-mode plugin for hexo</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-org --save</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Configure hexo for org-mode with EMACS (on MacOS)</h2>
+<div class="outline-text-2" id="text-2">
+<p>
 In order to use the org-mode plugin, add the following at the end of your <code>_config.yml</code> file at the root of the hexo site folder: 
 </p>
 
@@ -141,9 +158,11 @@ In order to use the org-mode plugin, add the following at the end of your <code>
 
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"># hexo-renderer-org&#10;## Docs: https://github.com/coldnew/hexo-render-org&#10;org:&#10;  emacs: /Applications/Emacs.app/Contents/MacOS/Emacs&#10;  emacsclient: /Applications/Emacs.app/Contents/MacOS/bin/emacsclient&#10;  cachedir: ./hexo-org-cache/&#10;  theme: tango-dark&#10;  common: |&#10;  htmlize: true</span><br></pre></td></tr></table></figure>
 </div>
+</div>
+</div>
 
 <p class="author">Author: IOANNIS ZANNOS</p>
-<p class="date">Created: 2017-05-17 Wed 10:33</p>
+<p class="date">Created: 2017-05-17 Wed 13:45</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer" target="_blank" rel="external">Validate</a></p>
 
@@ -318,9 +337,9 @@ In order to use the org-mode plugin, add the following at the end of your <code>
     <form class="search-form">
         <label style="width: 72%;">
             <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="search-field" style="height: 36px; width: 100%;" placeholder=" Suche…" value="" name="s" title="Search for:">
+            <input type="search" class="search-field" style="height: 36px; width: 100%;" placeholder=" Search…" value="" name="s" title="Search for:">
         </label>
-        <input type="submit" class="search-form-submit" value="Suche">
+        <input type="submit" class="search-form-submit" value="Search">
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
@@ -357,7 +376,7 @@ In order to use the org-mode plugin, add the following at the end of your <code>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Kategorien</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/hexo-template-site/categories/EMACS/">EMACS</a><span class="category-list-count">1</span></li></ul>
     </div>
@@ -377,7 +396,7 @@ In order to use the org-mode plugin, add the following at the end of your <code>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo-template-site/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li></ul>
@@ -389,7 +408,7 @@ In order to use the org-mode plugin, add the following at the end of your <code>
     
   <div class="widget_athemes_tabs">
     <ul id="widget-tab" class="clearfix widget-tab-nav">
-      <li class="active"><a>letzter Beitrag</a></li>
+      <li class="active"><a>Recent Posts</a></li>
     </ul>
     <div class="widget">
       <ul>
@@ -400,7 +419,7 @@ In order to use the org-mode plugin, add the following at the end of your <code>
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/hexo-template-site/2017/05/17/config/">Adjustments to Config file</a></h6>
+              <h6 style="margin: 0;"><a href="/hexo-template-site/2017/05/17/config/">Using Org-Mode in Hexo: Adjustments to Config file</a></h6>
               <span>May 17, 2017</span>
             </div>
 
